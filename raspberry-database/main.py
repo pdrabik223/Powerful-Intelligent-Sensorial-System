@@ -9,6 +9,10 @@ import schedule
 from dataclasses import dataclass
 
 
+# todo print info about connected devices, database connection state, and current aplication job
+# todo intake database all database params
+# todo connect real sensors not those dummy ones
+
 @dataclass
 class Measurement:
     name: str
@@ -65,22 +69,18 @@ def collect_factory(measurment_function):
 # TODO: Make this not be global
 SQL_CONNECTION = None
 
-
 def main():
     parser = argparse.ArgumentParser(description='Periodically measure temperature.')
-    parser.add_argument('--period', '-p', type=int, help='measure period in seconds', default=2)
-    parser.add_argument('--no_samples', '-n', type=int, help='total number of measurements to perform', default=10)
-    parser.add_argument('--console_output', '-c', type=bool, help='show measurements in console', default=False)
+    parser.add_argument('--database-ip', '-i', type=str, help='database ip v4', default='127.0.0.1')
     parser.add_argument('--debug', '-d', action='store_true',
                         help='Debug mode will collect ten samples in 10 second periods',
                         default=False)
     args = parser.parse_args()
 
-
     global SQL_CONNECTION
     SQL_CONNECTION = mysql.connector.connect(user='root',
                                              password='pssd123',
-                                             host='127.0.0.1',
+                                             host=args.database_ip,
                                              database='measurements')
 
     if args.debug:
