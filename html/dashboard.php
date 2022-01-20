@@ -161,9 +161,6 @@ if(!isset($_SESSION['user_id'])){
           var data_growth = <?php echo json_encode($chart_master['growth']); ?>;
           var data_date_greenery = <?php echo json_encode($chart_master['date_greenery']); ?>;
 
-          data_date_greenery.shift();
-          data_growth.shift();
-
           const ctx_t = document.getElementById('chart_canvas_1').getContext('2d');
           const chart_temperature = new Chart(ctx_t, {
               type: 'line',

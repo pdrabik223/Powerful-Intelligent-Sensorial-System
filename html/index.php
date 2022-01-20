@@ -23,7 +23,7 @@ if(!isset($_SESSION['user_id'])){
     <div class="container py-5">
       <div class="row">
         <div class="mx-auto col-lg-8 col-md-10">
-          <h1 class="display-3 mb-4">Powerful Intelligent Sensorial System</h1>
+          <h1 class="display-3 mb-4">SensorFarm</h1>
           <p class="lead mb-5">Nasz system ma pozwolić farmerom w łatwy sposób zbierać informacje odnośnie swojej plantacji, organizować je i analizować. Dane będą zbierane za pomocą gamy czujników zamontowanych bezpośrednio w otoczeniu hodowli. </p> <a href="login" class="btn btn-lg btn-primary mx-1" >LOG IN</a> <a class="btn btn-lg mx-1 btn-outline-primary" href="register">REGISTER</a>
         </div>
       </div>
