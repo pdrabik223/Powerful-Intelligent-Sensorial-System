@@ -306,7 +306,7 @@ if(!isset($_SESSION['user_id'])){
               data: {
                   labels: data_date_greenery,
                   datasets: [{
-                      label: 'Growth [%]',
+                      label: 'Greenery Change',
                       data: data_growth ,
                       backgroundColor:'rgb(0, 200, 0)',
                       tension: 0.2
@@ -331,10 +331,10 @@ if(!isset($_SESSION['user_id'])){
                           }
                       },
                       y: {
-                        beginAtZero: true,
+                        beginAtZero: false,
                         title: {
                           display: true,
-                          text: 'Growth  [%]',
+                          text: 'Greenery Change',
                           font: {
                             size: 20
                           }
