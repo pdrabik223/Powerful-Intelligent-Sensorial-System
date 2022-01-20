@@ -58,7 +58,7 @@ if (!isset($_SESSION['user_id'])){
                 <th scope="col">Temperature</th>
                 <th scope="col">Humidity</th>
                 <th scope="col">Greenery in %</th>
-                <th scope="col">Greenery change</th>
+                <!-- <th scope="col">Greenery change</th> -->
 				<th scope="col">Status</th>
                 <th scope="col">Preview</th>
             </tr>
@@ -99,7 +99,7 @@ if (!isset($_SESSION['user_id'])){
                     <td><?php echo $data['temp'].'°C'; ?></td>
                     <td><?php echo $data['humidity'].'%'; ?></td>
                     <td><?php echo $data['greenery']; ?></td>
-                    <td><?php echo $data['greenery_change'];?></td>
+                    <!-- <td><php echo $data['greenery_change'];?></td> -->
 					<td>
 						<?php if (($data['flags']) == 0) { ?>
 							<i class="fas fa-circle fa-2x text-success"></i>
@@ -118,7 +118,7 @@ if (!isset($_SESSION['user_id'])){
 	    ?>
       </table>
 	  
-	    <!-- Pagination -->
+	<!-- Pagination -->
    <div class="py-2"  >
     <div class="container"  >
       <div class="row" >
