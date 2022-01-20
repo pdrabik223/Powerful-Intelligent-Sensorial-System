@@ -159,6 +159,10 @@ if(!isset($_SESSION['user_id'])){
           var data_humidity = <?php echo json_encode($chart_master['hum']); ?>;
           var data_greenery = <?php echo json_encode($chart_master['green']); ?>;
           var data_growth = <?php echo json_encode($chart_master['growth']); ?>;
+          var data_date_greenery = <?php echo json_encode($chart_master['date_greenery']); ?>;
+
+          data_date_greenery.shift();
+          data_growth.shift();
 
           const ctx_t = document.getElementById('chart_canvas_1').getContext('2d');
           const chart_temperature = new Chart(ctx_t, {
@@ -257,7 +261,7 @@ if(!isset($_SESSION['user_id'])){
           const chart_greenery = new Chart(ctx_g, {
               type: 'line',
               data: {
-                  labels: data_date,
+                  labels: data_date_greenery,
                   datasets: [{
                       label: 'Greenery [%]',
                       data: data_greenery,
@@ -303,7 +307,7 @@ if(!isset($_SESSION['user_id'])){
           const chart_growth = new Chart(ctx_gt, {
               type: 'bar',
               data: {
-                  labels: data_date,
+                  labels: data_date_greenery,
                   datasets: [{
                       label: 'Growth [%]',
                       data: data_growth ,
