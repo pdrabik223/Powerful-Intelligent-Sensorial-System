@@ -37,7 +37,7 @@ It takes two dates as a parameters, and selecting rows between them. -->
             while($row = mysqli_fetch_assoc($results_greenery)) {
               $chart_data_date_greenery[] = $row["date"];;
               $chart_data_greenery[] = $row["greenery"];
-              $chart_data_greenery_change[] = $last_pomiar - $row['greenery'];
+              $chart_data_greenery_change[] = $row['greenery'] - $last_pomiar;
               $last_pomiar = $row['greenery'];
             }
 

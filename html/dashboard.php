@@ -67,14 +67,16 @@ if(!isset($_SESSION['user_id'])){
             
             <li class=" border-0 list-group-item d-flex justify-content-between align-items-center">Greenery:<h3><?php echo number_format($data['greenery'], 2).' %'; ?></h3><i class="fab fa-envira fa-2x text-success"></i></li>
             
+            <!--
             <li class=" border-0 list-group-item d-flex justify-content-between align-items-center">Growth:<h3><?php echo $data['greenery_change']. ' %'; ?></h3>
-            <!-- Jesli Growth > 0 strzalka w gore, jesli zmalal strzalka w dol -->
-            <?php if (($data['greenery_change']) > 0) : ?>
+            Jesli Growth > 0 strzalka w gore, jesli zmalal strzalka w dol
+            <php if (($data['greenery_change']) > 0) : ?>
                <i class="fa fa-arrow-up fa-2x text-success"></i>
-            <?php elseif (($data['greenery_change']) < 0) : ?>
+            <php elseif (($data['greenery_change']) < 0) : ?>
               <i class="fa fa-arrow-down fa-2x text-danger"></i>
-            <?php endif; ?>
+            <php endif; ?>
             </li>
+            -->
 
 			  <?php if (($data['flags']) == 0) { ?>
 		  			<li class=" border-0 list-group-item d-flex justify-content-between align-items-center">Plant status:<i class="fas fa-circle fa-2x text-success"></i></li>
