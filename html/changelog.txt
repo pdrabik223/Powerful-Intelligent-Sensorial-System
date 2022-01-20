@@ -1,0 +1,8 @@
+11.01:------------------------------------------
+-Zmiana nazw Summary->Dashboard, Charts->Data
+-Login: Zmiana backgroundu ./local/background1.jpg
+-Home: Zmiana backgroundu ./local/background2.jpg
+-Zmiana SaveLog- dodanie Growth, formatowanie
+-Dashboard: Formatowanie danych do 2 miejsc po przecinku
+-Dashboard: Uzupełnienie ikon
+-Dashboard: Przeniesienie form do belki po lewej
