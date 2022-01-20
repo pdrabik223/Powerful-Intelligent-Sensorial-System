@@ -96,9 +96,9 @@ if(!isset($_SESSION['user_id'])){
                 <div class="container">
                 <form action="dashboard.php" method="post">
                 <label for="begindate">Begin :</label>
-                <input type="date" id="begindate" name="begindate" size=5px><br>
+                <input type="date" id="begindate" name="begindate" size=5px value="<?php echo $_POST['begindate']; ?>"><br>
                 <label for="enddate">End at:</label>
-                <input type="date" id="enddate" name="enddate" size=5px><br>
+                <input type="date" id="enddate" name="enddate" size=5px value="<?php echo $_POST['enddate']?>"><br>
                 <input type="submit" class="btn btn-primary my-2" value="Submit" name="button">
                 </form>
                 </div>
